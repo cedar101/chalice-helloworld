@@ -1,0 +1,111 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "helloworld",
+      "version": "1.0"
+    },
+    "servers": [
+      {
+        "url": "https://gx9tg6lrgc.execute-api.ap-northeast-2.amazonaws.com/{basePath}",
+        "variables": {
+          "basePath": {
+            "default": "/api"
+          }
+        }
+      }
+    ],
+    "paths": {
+      "/users": {
+        "post": {
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Empty"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/hello/{name}": {
+        "get": {
+          "parameters": [
+            {
+              "name": "name",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Empty"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/cities/{city}": {
+        "get": {
+          "parameters": [
+            {
+              "name": "city",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Empty"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/": {
+        "get": {
+          "responses": {
+            "200": {
+              "description": "200 response",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Empty"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Empty": {
+          "title": "Empty Schema",
+          "type": "object"
+        }
+      }
+    }
+  }

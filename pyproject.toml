@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "chalice-helloworld"
+version = "0.1.0"
+description = ""
+authors = ["Paul Miller <paul@paulmillr.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+chalice = "^1.22.2"
+
+[tool.poetry.dev-dependencies]
+schemathesis = "^3.4.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
